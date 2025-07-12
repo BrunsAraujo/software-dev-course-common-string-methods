@@ -69,35 +69,98 @@ Complete the following tasks and assign the results to the specified variables. 
 let inputString = "  Welcome to the Coding Bootcamp! Learn JavaScript today.  ";
 
 // 1. Searching
-let hasJavaScript; // Your code here
+let hasJavaScript; // Your code here 
+let inputString = "  Welcome to the Coding Bootcamp! Learn JavaScript  today.  ";
+let hasJavaScript = inputString.includes("JavaScript");
+console.log(hasJavaScript); //true
+
+
 let codingPosition; // Your code here
+let inputString = "  Welcome to the Coding Bootcamp! Learn JavaScript  today.  ";
+let codingPosition = inputString.indexOf("Coding");
+console.log(codingPosition); // 18
+
+
 let startsWithWelcome; // Your code here
+let inputString = "  Welcome to the Coding Bootcamp! Learn JavaScript  today.  ";
+let startsWithWelcome = inputString.startsWith("Welcome");
+console.log(startsWithWelcome);//false
+
 let endsWithToday; // Your code here
+let inputString = "  Welcome to the Coding Bootcamp! Learn JavaScript  today.  ";
+let endsWithToday = inputString.endsWith("today.");
+console.log(endsWithToday);//false
 
 // 2. Transforming
 let lowercaseString; // Your code here
+let inputString = "  Welcome to the Coding Bootcamp! Learn JavaScript  today.  ";
+let lowercaseString = inputString.toLowerCase();
+console.log(lowercaseString);//welcome to the coding bootcamp!learn javascript today.
+
 let uppercaseString; // Your code here
+let inputString = "  Welcome to the Coding Bootcamp! Learn JavaScript  today.  ";
+let uppercaseString = inputString.toUpperCase();
+console.log(uppercaseString); //WELCOME TO THE CODING BOOTCAMP! LEARN JAVASCRIPT TODAY.
+
 let trimmedString; // Your code here
+let inputString = "  Welcome to the Coding Bootcamp! Learn JavaScript  today.  ";
+let trimmedString = inputString.trim();
+console.log(trimmedString);//Welcome to the Coding Bootcamp! Learn JavaScript  today.
+
 let replacedString; // Your code here
+let inputString = "Welcome to the Coding Bootcamp! Learn JavaScript today.";
+let replacedString = inputString.replace("JavaScript", "coding");
+console.log(replacedString);//Welcome to the Coding Bootcamp! Learn coding today.
 
 // 3. Breaking Apart
 let wordsArray; // Your code here
+let inputString = "Welcome to the Coding Bootcamp! Learn JavaScript today.";
+let wordsArray = inputString.split(" ");
+console.log(wordsArray);//[
+  //'Welcome',
+  //'to',
+  //'the',
+  //'Coding',
+  //'Bootcamp!',
+  //'Learn',
+ // 'JavaScript',
+ // 'today.'
+//]
 
 // 4. Retrieving
 let firstCharacter; // Your code here
+let inputString = "  Welcome to the Coding Bootcamp! Learn JavaScript today.  ";
+let trimmedString = inputString.trim();
+let firstCharacter = trimmedString.charAt(0);
+console.log(firstCharacter); //W
+
 let extractedBootcamp; // Your code here
+let inputString = "Welcome to the Coding Bootcamp! Learn JavaScript today.";
+let extractedBootcamp = inputString.slice(22, 30);
+console.log(extractedBootcamp); //Bootcamp
 
 // Log all results
 console.log({
-  hasJavaScript,
-  codingPosition,
-  startsWithWelcome,
-  endsWithToday,
-  lowercaseString,
-  uppercaseString,
-  trimmedString,
-  replacedString,
-  wordsArray,
-  firstCharacter,
-  extractedBootcamp,
+  hasJavaScript, //true
+console.log(hasJavaScript); // true
+  codingPosition, // 18
+  startsWithWelcome,//false
+  endsWithToday,//false
+  lowercaseString,//welcome to the coding bootcamp!learn javascript today.
+  uppercaseString,//WELCOME TO THE CODING BOOTCAMP! LEARN JAVASCRIPT TODAY.
+  trimmedString,//Welcome to the Coding Bootcamp! Learn JavaScript  today.
+  replacedString,//Welcome to the Coding Bootcamp! Learn coding today.
+  wordsArray, //[
+  //'Welcome',
+  //'to',
+  //'the',
+  //'Coding',
+  //'Bootcamp!',
+  //'Learn',
+ // 'JavaScript',
+ // 'today.'
+//]
+
+  firstCharacter,//W
+  extractedBootcamp,//Bootcamp
 });
